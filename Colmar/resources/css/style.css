@@ -1,0 +1,445 @@
+/*GENERAL STYLING*/
+body {
+  font-family: "Lato", "Helvetica", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+a, .article, .course, .course img {
+  transition: all 150ms ease-out;
+}
+
+.mobile {
+  display: none;
+}
+
+img {
+ -webkit-backface-visibility: hidden;
+}
+
+p {
+  font-family: "Open Sans", "Helvetica", sans-serif;
+  font-size: 1rem;
+}
+
+a {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #00c19d;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #267f6f;
+}
+
+h1, h2, h3 {
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #1f292d;
+}
+
+h2 {
+  font-size: 1.25rem;
+  color: #1f292d;
+}
+
+h3 {
+  font-size: 1rem;
+  color: #1f292d;
+}
+
+.site-container {
+  max-width: 1500px;
+  margin: auto;
+}
+
+/*NAV*/
+nav {
+  height: 4rem;
+  width: 100%;
+  color: #fff;
+  background-color: #00c19d;
+  position: fixed;
+  z-index: 10;
+  box-shadow: 0 3px 6px rgba(0,0,0,.2);
+}
+
+nav a, footer a {
+  color: #fff;
+}
+
+nav a:hover, footer a:hover {
+  color: #267f6f;
+}
+
+nav, nav ul, .logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.logo-text span {
+  font-weight: 900;
+  color: #1f292d;
+}
+
+.logo-text {
+  font-size: 1.2rem;
+}
+
+.logo {
+  padding-left: 1.5rem;
+}
+
+.logo img {
+  height: 2rem;
+}
+
+.logo:hover {
+  opacity: 0.6;
+}
+
+nav ul {
+  padding-right: 1.5rem;
+}
+
+nav ul li {
+  padding: 0.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: flex;
+    justify-content: space-around;
+  }
+  .logo {
+    padding: 0rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .mobile img:hover {
+    opacity: 0.3;
+  }
+}
+
+/* HERO BANNER */
+header {
+  background-color: #fafafa;
+
+}
+
+header .site-container {
+  display: flex;
+  align-items: center;
+  padding-top: 4rem;
+}
+
+header img {
+  max-width: 60%;
+  margin: 2rem 1.5rem;
+}
+
+.hero-banner h1 {
+  font-size: 3rem;
+  line-height: 3.2rem;
+}
+
+.hero-banner p {
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.hero-banner {
+  margin: 0 1.5rem;
+}
+
+
+.button {
+  display: inline-block;
+  background-color: #fafafa;
+  color: #00c19d;
+  border: 3px solid #00c19d;
+  border-radius: 0.25rem;
+  font-size: 1.3rem;
+  padding: 0.5rem 3rem;
+}
+
+.button:hover {
+  color: #fafafa;
+  background-color: #00c19d;
+  border: 3px solid #00c19d;
+}
+
+@media only screen and (max-width: 768px) {
+  header .site-container {
+    flex-flow: column;
+  }
+   header img {
+     max-width: 100%;
+     margin: 0;
+   }
+   .hero-banner {
+     padding: 2rem 1rem;
+   }
+   .button {
+     display: block;
+     text-align: center;
+     max-width: 100%;
+     margin: 1.5rem, auto;
+   }
+}
+
+/*INFORMATION ARTICLES*/
+#info {
+  display: flex;
+}
+
+.article-main {
+  max-width: 60%;
+  margin: 2rem 1.5rem;
+}
+
+.article-main img {
+  max-width: 100%;
+  height: auto;
+}
+
+.article-main h3 {
+  font-size: 2rem;
+}
+
+.article-side {
+  padding-top: 1rem;
+  border-left: 1px solid #fafafa;
+}
+
+.article {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.article img {
+  max-width: 35%;
+  height: auto;
+  margin-right: 1rem;
+}
+
+.article h3 {
+  font-size: 1.2rem;
+}
+
+.article p {
+  padding: 0.5rem 0;
+
+}
+
+.article:hover {
+  background-color: #fafafa;
+}
+
+
+#info .quote {
+  margin: 2rem 0 0.5rem 0;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@media only screen and (max-width: 768px) {
+  #info .article-main {
+    display: none;
+  }
+
+  #info .article-side {
+    border: none;
+    padding-top: 0;
+    margin: 0 auto;
+  }
+
+  .article {
+    flex-flow: column;
+    align-items: flex-start;
+  }
+
+  .article-side {
+    display: flex;
+    flex-flow: column;
+  }
+
+  .article .mobile {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .article img {
+    margin: 0;
+  }
+
+  .article-text {
+    padding: 1rem;
+  }
+  .article:hover {
+    background-color: #fafafa;
+  }
+}
+
+/*START LEARNING*/
+#courses {
+  background-color: #fafafa;
+  padding: 2rem 0;
+}
+
+#courses .courses {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 2.5rem;
+}
+
+#courses h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.course {
+  max-width: 30%;
+  background-color: #fff;
+  margin: 0.5rem;
+}
+
+.course a {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-transform: none;
+  color: #1f292d;
+}
+
+.course img {
+  max-width: 100%;
+  height: auto;
+}
+
+.course-text {
+  padding: 1rem;
+}
+
+.course-text p {
+  margin: 0.5rem 0;
+}
+
+.course:hover {
+  background-color: #00c19d;
+}
+
+.course a:hover {
+  color: #1f292d;
+}
+
+@media only screen and (max-width: 768px) {
+  #courses {
+    background-color: #fff;
+    border-top: 1px solid #fafafa;
+  }
+  #courses .courses {
+    flex-flow: column;
+    padding: 0 1rem;
+  }
+  .course {
+    max-width: 100%;
+    background-color: #fafafa;
+    margin: 0.5rem;
+  }
+  .course img {
+    display: none;
+  }
+  .course-text p {
+    display: none;
+  }
+}
+
+/*THESIS EXHIBITS*/
+#thesis {
+  padding: 2rem 0;
+}
+
+#thesis h1 {
+  text-align: center;
+}
+
+#thesis .article-side {
+  border: none;
+
+}
+
+.thesis-articles {
+  display: flex;
+}
+
+.article-main video {
+  max-width: 100%;
+  height: auto;
+}
+
+.article-main h3 {
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+@media only screen and (max-width: 768px) {
+  #thesis {
+    border-top: 1px solid #fafafa;
+  }
+  #thesis .article-side {
+    display: none;
+  }
+  #thesis .article-main {
+    max-width: 100%;
+    height: auto;
+    margin: 2rem 0 0 0;
+  }
+  #thesis .article-main h3, #thesis .article-main p {
+    display: none;
+  }
+}
+
+/*FOOTER*/
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background-color: #1f292d;
+  color: #fff;
+}
+
+footer a {
+  margin: 0 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 200;
+  text-decoration: underline;
+}
+
+footer p {
+  font-size: 0.8rem;
+  font-weight: 200;
+}
+
+@media only screen and (max-width: 768px) {
+  footer span {
+    display: none;
+  }
+}
+
+/*COLMAR ACADEMY SITE - Luke Henley*/
